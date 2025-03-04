@@ -85,7 +85,6 @@ export default function Lanyard({
     </div>
   );
 }
-
 interface BandProps {
   maxSpeed?: number;
   minSpeed?: number;
@@ -144,7 +143,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
       };
     }
   }, [hovered, dragged]);
-
   useFrame((state, delta) => {
     if (dragged && typeof dragged !== "boolean") {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
